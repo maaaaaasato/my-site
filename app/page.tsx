@@ -15,9 +15,9 @@ export default function Home() {
         <div className="relative z-10 flex min-h-screen flex-col justify-between p-6 md:p-10">
           <div>
             <h1 className="text-2xl font-medium tracking-[0.2em] md:text-3xl">
-              MASATO
-              <br />
               WORLD
+              <br />
+              VAGARE
             </h1>
           </div>
 
