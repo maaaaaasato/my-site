@@ -35,7 +35,7 @@ export default function Home() {
       {/* BLOG */}
       <section className="px-6 py-20 md:px-10 md:py-28">
         <div className="mb-10 flex items-end justify-between">
-          <h2 className="text-2xl font-medium tracking-[0.2em]">BLOG</h2>
+          <h2 className="text-2xl font-medium tracking-[0.2em]">JOURNAL</h2>
 
           <a
             href="#"

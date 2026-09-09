@@ -37,6 +37,12 @@ export default async function BlogPost({ params }: Props) {
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+        <a
+          href="/"
+          className="mt-16 inline-block text-sm tracking-[0.15em] underline underline-offset-4 transition-opacity hover:opacity-60"
+        >
+          BACK TO HOME
+        </a>
       </article>
     </main>
   );
