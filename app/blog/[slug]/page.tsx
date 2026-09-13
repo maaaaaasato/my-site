@@ -34,7 +34,7 @@ export default async function BlogPost({ params }: Props) {
         <img src={data.image} alt={data.title} className="mb-10 w-full" />
 
         <div
-          className="prose prose-lg max-w-none"
+          className="max-w-none text-base leading-8 [&_p]:mb-8"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
         <a

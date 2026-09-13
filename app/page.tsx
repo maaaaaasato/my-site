@@ -63,6 +63,24 @@ export default function Home() {
 
             <h3 className="mt-2 text-base font-medium">My First Blog</h3>
           </a>
+          {/* CARD 2 */}
+          <a href="/blog/002">
+            <div className="aspect-[4/3] overflow-hidden bg-gray-200">
+              <img
+                src="/hero.jpg"
+                alt="シルバーウィーク、どこへ行こうか？"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
+              2026.09.13
+            </p>
+
+            <h3 className="mt-2 text-base font-medium">
+              シルバーウィーク、どこへ行こうか？
+            </h3>
+          </a>
         </div>
       </section>
     </main>
