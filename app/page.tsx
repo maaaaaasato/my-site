@@ -67,7 +67,7 @@ export default function Home() {
           <a href="/blog/002">
             <div className="aspect-[4/3] overflow-hidden bg-gray-200">
               <img
-                src="/hero.jpg"
+                src="/journal_silverweek.jpg"
                 alt="シルバーウィーク、どこへ行こうか？"
                 className="h-full w-full object-cover"
               />
