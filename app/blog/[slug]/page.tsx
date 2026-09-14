@@ -37,12 +37,21 @@ export default async function BlogPost({ params }: Props) {
           className="max-w-none text-base leading-8 [&_p]:mb-8"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
-        <a
-          href="/"
-          className="mt-16 inline-block text-sm tracking-[0.15em] underline underline-offset-4 transition-opacity hover:opacity-60"
-        >
-          BACK TO HOME
-        </a>
+        <div className="mt-16 flex gap-8">
+          <a
+            href="/journal"
+            className="text-sm tracking-[0.15em] underline underline-offset-4 transition-opacity hover:opacity-60"
+          >
+            BACK TO JOURNAL
+          </a>
+
+          <a
+            href="/"
+            className="text-sm tracking-[0.15em] underline underline-offset-4 transition-opacity hover:opacity-60"
+          >
+            BACK TO HOME
+          </a>
+        </div>
       </article>
     </main>
   );

@@ -38,7 +38,7 @@ export default function Home() {
           <h2 className="text-2xl font-medium tracking-[0.2em]">JOURNAL</h2>
 
           <a
-            href="#"
+            href="journal"
             className="text-sm tracking-[0.15em] underline underline-offset-4"
           >
             VIEW ALL
