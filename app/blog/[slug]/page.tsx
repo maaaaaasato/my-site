@@ -31,7 +31,9 @@ export default async function BlogPost({ params }: Props) {
           {data.title}
         </h1>
 
-        <img src={data.image} alt={data.title} className="mb-10 w-full" />
+        {data.image && (
+          <img src={data.image} alt={data.title} className="mb-10 w-full" />
+        )}
 
         <div
           className="max-w-none text-base leading-8 [&_p]:mb-8"

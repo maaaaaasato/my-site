@@ -80,6 +80,16 @@ export default function Home() {
             <h3 className="mt-2 text-base font-medium">
               シルバーウィーク、どこへ行こうか？
             </h3>
+            {/* CARD 3 */}
+          </a>
+          <a href="/blog/003">
+            <div className="aspect-[4/3] overflow-hidden border border-black bg-white"></div>
+
+            <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
+              2026.09.26
+            </p>
+
+            <h3 className="mt-2 text-base font-medium">尾道についた。</h3>
           </a>
         </div>
       </section>
