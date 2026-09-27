@@ -38,8 +38,8 @@ export default function Home() {
           <h2 className="text-2xl font-medium tracking-[0.2em]">JOURNAL</h2>
 
           <a
-            href="journal"
-            className="text-sm tracking-[0.15em] underline underline-offset-4"
+            href="/journal"
+            className="text-sm tracking-[0.15em] underline underline-offset-4 transition-opacity hover:opacity-60"
           >
             VIEW ALL
           </a>
@@ -48,7 +48,10 @@ export default function Home() {
         {/* BLOG CARDS */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           {/* CARD 1 */}
-          <a href="/blog/first-blog">
+          <a
+            href="/blog/first-blog"
+            className="transition-opacity hover:opacity-60"
+          >
             <div className="aspect-[4/3] overflow-hidden bg-gray-200">
               <img
                 src="/hero.jpg"
@@ -64,7 +67,7 @@ export default function Home() {
             <h3 className="mt-2 text-base font-medium">My First Blog</h3>
           </a>
           {/* CARD 2 */}
-          <a href="/blog/002">
+          <a href="/blog/002" className="transition-opacity hover:opacity-60">
             <div className="aspect-[4/3] overflow-hidden bg-gray-200">
               <img
                 src="/journal_silverweek.jpg"
@@ -80,10 +83,14 @@ export default function Home() {
             <h3 className="mt-2 text-base font-medium">
               シルバーウィーク、どこへ行こうか？
             </h3>
-            {/* CARD 3 */}
           </a>
-          <a href="/blog/003">
-            <div className="aspect-[4/3] overflow-hidden border border-black bg-white"></div>
+          {/* CARD 3 */}
+          <a href="/blog/003" className="transition-opacity hover:opacity-60">
+            <div className="flex aspect-[4/3] items-center justify-center overflow-hidden border border-black bg-white p-6">
+              <p className="text-base font-medium text-center">
+                尾道についた。
+              </p>
+            </div>
 
             <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
               2026.09.26
