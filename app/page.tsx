@@ -98,6 +98,17 @@ export default function Home() {
 
             <h3 className="mt-2 text-base font-medium">尾道についた。</h3>
           </a>
+          <a href="/blog/004" className="transition-opacity hover:opacity-60">
+            <div className="flex aspect-[4/3] items-center justify-center overflow-hidden border border-black bg-white p-6">
+              <p className="text-base font-medium text-center">広島へ。</p>
+            </div>
+
+            <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
+              2026.09.29
+            </p>
+
+            <h3 className="mt-2 text-base font-medium">広島へ。</h3>
+          </a>
         </div>
       </section>
     </main>

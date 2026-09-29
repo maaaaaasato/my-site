@@ -5,7 +5,10 @@ export default function JournalPage() {
         <h1 className="text-4xl font-medium tracking-tight">JOURNAL</h1>
 
         <div className="mt-16 grid gap-x-8 gap-y-16 md:grid-cols-3">
-          <a href="/blog/first-blog" className="transition-opacity hover:opacity-60">
+          <a
+            href="/blog/first-blog"
+            className="transition-opacity hover:opacity-60"
+          >
             <div className="aspect-[4/3] overflow-hidden bg-gray-200">
               <img
                 src="/hero.jpg"
@@ -50,6 +53,17 @@ export default function JournalPage() {
             </p>
 
             <h2 className="mt-2 text-base font-medium">尾道についた。</h2>
+          </a>
+          <a href="/blog/004" className="transition-opacity hover:opacity-60">
+            <div className="flex aspect-[4/3] items-center justify-center overflow-hidden border border-black bg-white p-6">
+              <p className="text-base font-medium text-center">広島へ。</p>
+            </div>
+
+            <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
+              2026.09.29
+            </p>
+
+            <h2 className="mt-2 text-base font-medium">広島へ。</h2>
           </a>
         </div>
 
