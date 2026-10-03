@@ -1,4 +1,5 @@
 import fs from "fs";
+import Link from "next/link";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
@@ -13,7 +14,30 @@ type Props = {
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
 
-  const filePath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
+  const blogDir = path.join(process.cwd(), "content", "blog");
+
+  const posts = fs
+    .readdirSync(blogDir)
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => {
+      const filePath = path.join(blogDir, file);
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(fileContent);
+
+      return {
+        slug: file.replace(".md", ""),
+        title: data.title,
+        date: data.date,
+      };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  const currentIndex = posts.findIndex((post) => post.slug === slug);
+
+  const previousPost = posts[currentIndex + 1];
+  const nextPost = posts[currentIndex - 1];
+
+  const filePath = path.join(blogDir, `${slug}.md`);
 
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
@@ -39,6 +63,29 @@ export default async function BlogPost({ params }: Props) {
           className="max-w-none text-base leading-8 [&_p]:mb-8"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+        <div className="mt-16 flex items-center justify-between border-t border-black pt-6">
+          {previousPost ? (
+            <Link
+              href={`/blog/${previousPost.slug}`}
+              className="text-sm transition-opacity hover:opacity-60"
+            >
+              ← {previousPost.title}
+            </Link>
+          ) : (
+            <div />
+          )}
+
+          {nextPost ? (
+            <Link
+              href={`/blog/${nextPost.slug}`}
+              className="text-sm transition-opacity hover:opacity-60"
+            >
+              {nextPost.title} →
+            </Link>
+          ) : (
+            <div />
+          )}
+        </div>
         <div className="mt-16 flex gap-8">
           <a
             href="/journal"
