@@ -71,7 +71,7 @@ export default function JournalPage() {
             </div>
 
             <p className="mt-4 text-xs tracking-[0.1em] text-gray-500">
-              2026.09.21
+              2026.10.08
             </p>
 
             <h2 className="mt-2 text-base font-medium">広島から山口</h2>
