@@ -122,6 +122,51 @@ export default function Home() {
           </a>
         </div>
       </section>
+            {/* PHOTOGRAPHY */}
+      <section className="px-6 py-20 md:px-10 md:py-28">
+        <div className="mb-10">
+          <h2 className="text-2xl font-medium tracking-[0.2em]">
+            PHOTOGRAPHY
+          </h2>
+          <p className="mt-3 text-sm text-gray-500">
+            WHERE I WALKED
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          {/* PHILIPPINES */}
+          <a
+            href="/photography/philippines"
+            className="transition-opacity hover:opacity-60"
+          >
+            <div className="flex aspect-[4/3] items-center justify-center border border-black bg-white p-6">
+              <h3 className="text-base font-medium">Philippines</h3>
+            </div>
+          </a>
+
+          {/* JAPAN */}
+          <a
+            href="/photography/japan"
+            className="transition-opacity hover:opacity-60"
+          >
+            <div className="flex aspect-[4/3] items-center justify-center border border-black bg-white p-6">
+              <h3 className="text-base font-medium">Japan</h3>
+            </div>
+          </a>
+
+          {/* INDIA */}
+          <a
+            href="/photography/india"
+            className="transition-opacity hover:opacity-60"
+          >
+            <div className="flex aspect-[4/3] items-center justify-center border border-black bg-white p-6">
+              <h3 className="text-base font-medium">India</h3>
+            </div>
+          </a>
+
+       
+        </div>
+      </section>
     </main>
   );
 }
